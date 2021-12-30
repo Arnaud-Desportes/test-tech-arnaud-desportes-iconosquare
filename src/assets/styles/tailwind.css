@@ -4,11 +4,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
 body {
-  @apply text-gray-700 font-['comfortaa'] bg-gray-100
+  @apply text-gray-700 font-['comfortaa'] bg-gray-100 pb-10
 }
 
 a {
   @apply text-primary hover:text-secondary
+}
+a:hover {
+  @apply underline
 }
 
 a, a:hover, .animate {

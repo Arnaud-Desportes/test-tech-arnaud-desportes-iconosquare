@@ -3,6 +3,7 @@ import Pdf from 'assets/documents/test_technique_reactjs.pdf';
 import Main from 'designSystem/Main';
 import Button from 'designSystem/Button';
 import { RiDownloadCloud2Fill, RiGithubFill } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   return (
@@ -10,7 +11,9 @@ const Nav = () => {
       <Main>
         <div className='flex items-center justify-between'>
           <div className='flex items-center'>
-            <img src={require(`assets/svg/logo-app.svg`).default} alt="logo" className="w-7 h-7 md:w-10 md:h-10 mr-4 animate" />
+            <Link to="/">
+              <img src={require(`assets/svg/logo-app.svg`).default} alt="logo" className="w-7 h-7 md:w-10 md:h-10 mr-4 animate" />
+            </Link>
             <div className='flex md:flex-col'>
               <span className='font-extrabold text-md md:text-xl'>App technical test</span>
               <span className='flex items-center'>
@@ -22,13 +25,13 @@ const Nav = () => {
             </div>
           </div>
           <div className='flex items-center'>
-            <Button href='https://github.com/Arnaud-Desportes' className="mr-5">
+            <Button href='https://github.com/Arnaud-Desportes/test-tech-arnaud-desportes-iconosquare' className="mr-5">
               <RiGithubFill className='w-5 h-5 md:mr-2' />
               <span className='hidden md:block'>repository</span>
             </Button>
             <Button href={Pdf} theme='primary'>
               <RiDownloadCloud2Fill className='w-5 h-5 md:mr-2' />
-              <span className='hidden md:block'>sujet</span>
+              <span className='hidden md:block'>subject</span>
             </Button>
           </div>
         </div>

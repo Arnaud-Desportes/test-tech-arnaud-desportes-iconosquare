@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
+
 const Button = (props) => {
 
   const {
     theme,
     children,
     href,
+    link,
     className
 
   } = props;
@@ -18,7 +21,7 @@ const Button = (props) => {
     default:
       color = ''
   }
-  const buttonClass = `uppercase text-xs py-2 px-5 shadow-lg rounded-sm flex items-center ${color}`;
+  const buttonClass = `uppercase text-xs py-2 px-5 shadow-lg rounded flex items-center no-underline hover:no-underline ${color}`;
 
   if (href) {
     button =
@@ -26,8 +29,11 @@ const Button = (props) => {
       {children}
     </a>
   }
-  else {
-    button = 'hello world'
+  else if (link) {
+    button =
+    <Link to={link} className={`${buttonClass} ${className ? className : ''}`}>
+      {children}
+    </Link>
   }
 
   return (
