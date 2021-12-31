@@ -1,6 +1,13 @@
+// DESIGN SYSTEM
 import Button from 'designSystem/Button';
-import { RiArrowRightCircleFill, RiExternalLinkLine, RiPhoneFill, RiUser6Line } from "react-icons/ri";
 import Loader from 'designSystem/Loader';
+// ICON
+import {
+  RiArrowRightCircleFill,
+  RiExternalLinkLine,
+  RiPhoneFill,
+  RiUser6Line
+} from "react-icons/ri";
 
 export default function Tables({ data }) {
   return (
