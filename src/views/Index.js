@@ -6,12 +6,15 @@ import Footer from 'components/Footer';
 
 function Index() {
 
-  const [users, setusers] = useState([]);console.log(users)
+  const [users, setusers] = useState([]);console.log('list all users', users)
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
-      .then(json => setusers(json))
+      .then(json =>
+        // sorry internet god but nice loader must be seen
+        setTimeout(function () { setusers(json); }, 700)
+      )
   }, []);
 
   return (

@@ -3,7 +3,7 @@ import PulseLoader from "react-spinners/PulseLoader";
 
 const Loader = () => {
   return (
-    <PulseLoader color={'#cccccc'} size={7} />
+    <PulseLoader color={'#1841c7'} size={7} />
   );
 }
 

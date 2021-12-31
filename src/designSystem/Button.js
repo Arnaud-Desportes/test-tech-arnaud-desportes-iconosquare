@@ -19,9 +19,9 @@ const Button = (props) => {
       break;
 
     default:
-      color = ''
+      color = 'bg-white'
   }
-  const buttonClass = `uppercase text-xs py-2 px-5 shadow-lg rounded flex items-center no-underline hover:no-underline ${color}`;
+  const buttonClass = `uppercase text-xs py-2 px-5 shadow-lg rounded flex items-center no-underline hover:no-underline inline-block ${color}`;
 
   if (href) {
     button =
