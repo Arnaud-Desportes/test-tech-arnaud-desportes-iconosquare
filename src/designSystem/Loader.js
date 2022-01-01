@@ -1,9 +1,17 @@
-import React from 'react';
 import PulseLoader from "react-spinners/PulseLoader";
 
-const Loader = () => {
+const Loader = ({ color }) => {
+  let theme;
+  switch (color) {
+    case 'white':
+      theme = '#ffffff';
+      break;
+    default:
+      theme = '#1841c7';
+      break;
+  }
   return (
-    <PulseLoader color={'#1841c7'} size={7} />
+    <PulseLoader color={theme} size={7} />
   );
 }
 

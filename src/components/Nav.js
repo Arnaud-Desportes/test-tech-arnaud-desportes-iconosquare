@@ -15,7 +15,9 @@ const Nav = () => {
               <img src={require(`assets/svg/logo-app.svg`).default} alt="logo" className="w-7 h-7 md:w-10 md:h-10 mr-4 animate" />
             </Link>
             <div className='flex md:flex-col'>
-              <span className='font-extrabold text-md md:text-xl'>App technical test</span>
+              <div>
+                <span className='font-extrabold text-md md:text-xl'>App technical test</span> 🦄
+              </div>
               <span className='flex items-center'>
                 <span className='hidden md:block font-extrabold text-xs text-primary'>
                   By <a href='https://arnaud-desportes.fr' target='_blank' rel='noreferrer' className='underline'>Arnaud Desportes</a>.

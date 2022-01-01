@@ -56,7 +56,7 @@ export default function ModalPost({state, setstate, data}) {
                 <div className="fixed bottom-0 left-0 bg-white w-full px-6 py-5">
                   <button
                     type="button"
-                    className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-primary text-base font-medium text-white hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary sm:text-sm"
+                    className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-primary text-base font-medium text-white hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary sm:text-sm animate"
                     onClick={() => setstate(false)}
                   >
                     Close
@@ -73,11 +73,14 @@ export default function ModalPost({state, setstate, data}) {
                         {data.body}
                       </p>
                     </div>
-                    <div className="mt-5 mb-3 flex items-center">
-                      <div className="bg-primary rounded-full p-1.5 mr-2 inline-block">
-                        <RiChat3Fill className="w-4 h-4 text-white" />
+                    <div className='flex items-center justify-between'>
+                      <div className="mt-5 mb-3 flex items-center">
+                        <div className="bg-primary rounded-full p-1.5 mr-2 inline-block">
+                          <RiChat3Fill className="w-4 h-4 text-white" />
+                        </div>
+                        Comments {comments && comments.length > 0 ? <span className="ml-1 text-xs">({comments.length})</span> : <span className="ml-1 text-xs">(0)</span>}
                       </div>
-                      Comments {comments && comments.length > 0 ? <span className="ml-1 text-xs">({comments.length})</span> : 0}
+                      <span className='w-full h-0.5 bg-gray-200 ml-4 mt-1.5'></span>
                     </div>
                     {comments && comments.map(comment => (
                       <div className="py-5 border-b" key={comment.id}>
