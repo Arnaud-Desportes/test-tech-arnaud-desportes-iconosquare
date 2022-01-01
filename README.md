@@ -1,4 +1,4 @@
-# Test tech by Arnaud Desportes for Iconosquare.
+# Test tech by Arnaud Desportes for Iconosquare project.
 
 This project was bootstrapped with [Create React App].
 This project uses the Tailwind css framwork to speed up the creation process.
