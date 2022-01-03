@@ -1,4 +1,6 @@
+
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const Button = (props) => {
 
@@ -25,13 +27,13 @@ const Button = (props) => {
 
   if (href) {
     button =
-    <a href={href} target='_blank' rel='noreferrer' className={`${buttonClass} ${className ? className : ''}`}>
+    <a href={href} target='_blank' rel='noreferrer' className={`${buttonClass} ${className}`}>
       {children}
     </a>
   }
   else if (link) {
     button =
-    <Link to={link} className={`${buttonClass} ${className ? className : ''}`}>
+    <Link to={link} className={`${buttonClass} ${className}`}>
       {children}
     </Link>
   }
@@ -40,5 +42,19 @@ const Button = (props) => {
     button
   );
 }
+
+Button.defaultProps = {
+  children:"Click me !",
+  className:'',
+  href:"",
+  link:"",
+};
+
+Button.propTypes = {
+  children: PropTypes.any,
+  href: PropTypes.string,
+  link: PropTypes.string,
+  className: PropTypes.string,
+};
 
 export default Button;

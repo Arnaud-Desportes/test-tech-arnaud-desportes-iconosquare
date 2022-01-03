@@ -1,18 +1,29 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import Input from 'designSystem/Input'
-import Textarea from 'designSystem/Textarea'
-import Loader from 'designSystem/Loader'
-import Alert from 'designSystem/Alert'
+import PropTypes from 'prop-types';
 
-export default function AddPost({ state, setstate, uid , listPosts, setlistPosts} ) {
+// DESIGN SYSTEM
+import Alert from 'designSystem/Alert'
+import Input from 'designSystem/Input'
+import Loader from 'designSystem/Loader'
+import Textarea from 'designSystem/Textarea'
+
+export default function AddPost( props ) {
+
+  const {
+    listPosts,
+    setlistPosts,
+    setstate,
+    state,
+    uid,
+  } = props;
+
   const cancelButtonRef = useRef(null)
   const data = {
     title: '',
     content: ''
   }
-  const [stateData, setstateData] = useState(data); console.log("Global State => ", stateData)
+  const [stateData, setstateData] = useState(data);
   const handleChange = e => {
     setstateData({...stateData, [e.target.id]: e.target.value})
   }
@@ -154,3 +165,11 @@ export default function AddPost({ state, setstate, uid , listPosts, setlistPosts
     </Transition.Root>
   )
 }
+
+AddPost.propTypes = {
+  listPosts: PropTypes.array.isRequired,
+  setlistPosts: PropTypes.func.isRequired,
+  setstate: PropTypes.func.isRequired,
+  state: PropTypes.bool.isRequired,
+  uid: PropTypes.string.isRequired,
+};

@@ -1,6 +1,6 @@
-import React from 'react';
-import Main from 'designSystem/Main';
 import { Link } from 'react-router-dom';
+// DESIGN SYSTEM
+import Main from 'designSystem/Main';
 
 const Footer = () => {
   return (

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
 const Textarea = (props) => {
 
@@ -13,7 +14,6 @@ const Textarea = (props) => {
     state,
     handleChange,
     loading
-
   } = props;
 
   const [disabled, setdisabled] = useState(false);
@@ -27,7 +27,7 @@ const Textarea = (props) => {
   }, [loading]);
 
   return (
-    <div className={className ? className : ''}>
+    <div className={className}>
       <label htmlFor={id} className="block text-sm font-medium text-gray-700">
         {label}
         {required && <span className="ml-0.5 text-primary">*</span>}
@@ -45,6 +45,31 @@ const Textarea = (props) => {
       />
     </div>
   );
-}
+};
+
+Textarea.defaultProps = {
+  className:'',
+  id:'input-form',
+  label:'',
+  loading:false,
+  name:'input',
+  placeholder:'Your text here',
+  required:false,
+  rows: 5,
+  type:'text',
+};
+
+Textarea.propTypes = {
+  className: PropTypes.string,
+  handleChange: PropTypes.func.isRequired,
+  id: PropTypes.string,
+  label: PropTypes.string,
+  loading: PropTypes.bool,
+  name: PropTypes.string,
+  placeholder: PropTypes.string,
+  required: PropTypes.bool,
+  state: PropTypes.string.isRequired,
+  type: PropTypes.string,
+};
 
 export default Textarea;

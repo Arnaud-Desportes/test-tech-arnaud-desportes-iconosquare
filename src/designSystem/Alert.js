@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+// ICON
 import { RiErrorWarningFill } from 'react-icons/ri';
 
 const Alert = ({ children, className, theme }) => {
@@ -35,5 +37,17 @@ const Alert = ({ children, className, theme }) => {
     </div>
   );
 }
+
+Alert.defaultProps = {
+  children:'Message here',
+  className:'',
+  theme:'',
+};
+
+Alert.propTypes = {
+  children: PropTypes.string,
+  className: PropTypes.string,
+  theme: PropTypes.string,
+};
 
 export default Alert;

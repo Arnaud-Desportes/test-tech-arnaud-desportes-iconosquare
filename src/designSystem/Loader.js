@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import PulseLoader from "react-spinners/PulseLoader";
 
 const Loader = ({ color }) => {
@@ -14,5 +15,9 @@ const Loader = ({ color }) => {
     <PulseLoader color={theme} size={7} />
   );
 }
+
+Loader.propTypes = {
+  color: PropTypes.oneOf(['white']),
+};
 
 export default Loader;

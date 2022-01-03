@@ -1,9 +1,11 @@
-import React from 'react';
-import Pdf from 'assets/documents/test_technique_reactjs.pdf';
-import Main from 'designSystem/Main';
-import Button from 'designSystem/Button';
-import { RiDownloadCloud2Fill, RiGithubFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
+// DESIGN SYSTEM
+import Button from 'designSystem/Button';
+import Main from 'designSystem/Main';
+// ICON
+import { RiDownloadCloud2Fill, RiGithubFill } from 'react-icons/ri';
+// ASSETS
+import Pdf from 'assets/documents/test_technique_reactjs.pdf';
 
 const Nav = () => {
   return (

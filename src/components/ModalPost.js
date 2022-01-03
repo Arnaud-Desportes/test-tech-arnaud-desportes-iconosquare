@@ -1,8 +1,11 @@
 import { Fragment, useEffect, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { RiChat3Fill } from 'react-icons/ri'
+import PropTypes from 'prop-types';
+
 // DESIGN SYSTEM
 import Loader from 'designSystem/Loader';
+// ICON
+import { RiChat3Fill } from 'react-icons/ri'
 
 export default function ModalPost({state, setstate, data}) {
 
@@ -106,3 +109,9 @@ export default function ModalPost({state, setstate, data}) {
     )
   }
 }
+
+ModalPost.propTypes = {
+  data: PropTypes.object.isRequired,
+  setstate: PropTypes.func.isRequired,
+  state: PropTypes.bool.isRequired,
+};
