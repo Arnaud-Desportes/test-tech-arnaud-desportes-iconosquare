@@ -5,7 +5,7 @@ This project uses the Tailwind css framwork to speed up the creation process.
 
 ## Getting Started
 
-In the project directory, you can run:
+After installing all the dependencies, In the project directory, you can run:
 
 ### `npm start`
 
