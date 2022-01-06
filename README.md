@@ -1,16 +1,16 @@
 # Technical test by Arnaud Desportes.
 
-## The purpose of this technical test is to validate a minimum level of knowledge in ReactJS
-Le but de ce test technique est de valider un niveau de connaissance minimum en ``ReactJS`` en démontrant ma capacité à démarrer un projet qui utilise `React` et le framwork Css `Tailwind`, afin de piloter une API externe : [https://jsonplaceholder.typicode.com](jsonplaceholder),
-de générer une liste d'utilisateur,
-leurs profils
-ainsi que leurs données personnelles.
+## The purpose of this technical test is to validate a ``minimum level`` of knowledge in ReactJS
+The purpose of this technical test is to validate a minimum level of knowledge in `ReactJS` by demonstrating my ability to start a project that uses `React` and the Css framwork `Tailwind`, in order to drive an external API: [https://jsonplaceholder.typicode.com](jsonplaceholder),
+to generate a user list,
+their profiles
+and their personal data.
 
-Le test va plus loin en proposant différentes routes comme leurs pages profil qui affichent une liste de leurs posts et les commentaires liés à ces derniers dans une vue secondaire.
+The test goes further by offering different routes like their profile pages that display a list of their posts and the comments related to them in a secondary view.
 
-Le projet comporte d'autres fonctionnalités comme notamment la possibilité de publier un post sur le profil d'un utilisateur.
+The project includes other features such as the ability to publish a post on a user's profile.
 
-Ce test a été réalisé sans maquette graphique, une simple mise en forme créative a été réalisée sur l’instant afin de démontrer aussi l'âme de développeur front-end qui sommeil en moi. ;)
+This test was done without any graphic model, a simple creative layout was done on the spot to show the soul of a front-end developer that sleeps in me ;)
 ## Getting Started
 
 This project was bootstrapped with [Create React App].
