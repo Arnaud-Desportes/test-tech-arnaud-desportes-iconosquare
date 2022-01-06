@@ -18,7 +18,7 @@ const Nav = () => {
             </Link>
             <div className='flex md:flex-col'>
               <div>
-                <span className='font-extrabold text-md md:text-xl'>App technical test</span> 🦄
+                <span className='font-extrabold text-md md:text-xl'>App technical test</span>
               </div>
               <span className='flex items-center'>
                 <span className='hidden md:block font-extrabold text-xs text-primary'>

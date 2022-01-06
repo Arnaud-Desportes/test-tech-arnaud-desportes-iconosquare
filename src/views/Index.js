@@ -8,6 +8,7 @@ import Input from 'designSystem/Input';
 import Main from 'designSystem/Main';
 // ICON
 import { RiSearch2Line } from 'react-icons/ri';
+import Readme from 'components/Readme';
 
 function Index() {
 
@@ -76,6 +77,7 @@ function Index() {
     <>
       <Nav />
       <Main className='mt-10'>
+        <Readme />
         <Input
           state={search}
           handleChange={handleChange}
